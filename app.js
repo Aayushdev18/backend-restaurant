@@ -6,10 +6,10 @@ import { errorMiddleware } from "./error/error.js";
 import reservationRouter from "./routes/reservationRoute.js";
 
 const app = express();
-dotenv.config({ path:"./config/config.env"});
+dotenv.config({ path:".env"});
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Frontend URL
+    origin: 'https://restaurant-mauve-gamma.vercel.app', // Frontend URL
     methods: ['GET', 'POST'], // Allow specific HTTP methods
     credentials: true, // If using cookies or authentication tokens
 }));
